@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Election Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SE</div>
+        <div>
+          <h1>Student Election Portal</h1>
+          <p class="lead">Organize fair, simple elections — built with HTML &amp; CSS (static demo)</p>
+        </div>
+      </div>
+      <div class="meta-info">
+        <div class="badge">Semester 1 — 2025</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Left: Candidate list + info -->
+      <section>
+        <div class="card">
+          <h2>Candidates</h2>
+          <p class="muted">Choose a candidate from the right panel and click "Cast Vote".</p>
+
+          <div class="candidates">
+            <article class="candidate">
+              <div class="avatar a">AK</div>
+              <div class="info">
+                <div class="name">Akhil Kumar</div>
+                <div class="meta">Course: BCA | Year: 2nd</div>
+              </div>
+              <div class="badge">President</div>
+            </article>
+
+            <article class="candidate">
+              <div class="avatar b">NR</div>
+              <div class="info">
+                <div class="name">Nisha R.</div>
+                <div class="meta">Course: BSc | Year: 3rd</div>
+              </div>
+              <div class="badge">Vice President</div>
+            </article>
+
+            <article class="candidate">
+              <div class="avatar c">SM</div>
+              <div class="info">
+                <div class="name">Sahil Mehra</div>
+                <div class="meta">Course: BCom | Year: 2nd</div>
+              </div>
+              <div class="badge">Secretary</div>
+            </article>
+
+            <article class="candidate">
+              <div class="avatar d">PT</div>
+              <div class="info">
+                <div class="name">Pooja T.</div>
+                <div class="meta">Course: BA | Year: 1st</div>
+              </div>
+              <div class="badge">Treasurer</div>
+            </article>
+          </div>
+        </div>
+
+        <div class="card rules">
+          <h3>Rules</h3>
+          <ol>
+            <li>Only registered students may cast one vote each.</li>
+            <li>No campaigning inside exam halls.</li>
+            <li>Report irregularities to the election committee.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Right: Voting panel -->
+      <aside>
+        <div class="card">
+          <h2>Cast Your Vote</h2>
+          <form action="#thanks" method="get">
+            <label class="field">
+              <span class="label-title">Roll Number</span>
+              <input type="text" name="roll" placeholder="e.g. 20BCS045" required />
+            </label>
+
+            <fieldset class="candidates-field">
+              <legend>Select Candidate</legend>
+
+              <label class="radio">
+                <input type="radio" name="candidate" value="Akhil" required />
+                <div>
+                  <div class="name">Akhil Kumar</div>
+                  <div class="meta">President — BCA 2nd</div>
+                </div>
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="candidate" value="Nisha" />
+                <div>
+                  <div class="name">Nisha R.</div>
+                  <div class="meta">Vice President — BSc 3rd</div>
+                </div>
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="candidate" value="Sahil" />
+                <div>
+                  <div class="name">Sahil Mehra</div>
+                  <div class="meta">Secretary — BCom 2nd</div>
+                </div>
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="candidate" value="Pooja" />
+                <div>
+                  <div class="name">Pooja T.</div>
+                  <div class="meta">Treasurer — BA 1st</div>
+                </div>
+              </label>
+            </fieldset>
+
+            <div class="submit">
+              <button class="btn" type="submit">Cast Vote</button>
+              <button class="btn ghost" type="reset">Reset</button>
+            </div>
+
+            <div id="thanks">
+              <strong>Thank you!</strong>
+              <p>Your vote has been recorded (demo only).</p>
+            </div>
+          </form>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      This prototype is static. To make it live, add backend code to store votes securely.
+    </footer>
+  </div>
+</body>
+</html>
